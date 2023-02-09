@@ -1,6 +1,5 @@
-FROM eclipse-temurin:latest
+FROM adoptopenjdk:11-jre-hotspot
 RUN apt-get update && apt-get install git -y
 RUN git clone https://github.com/spring-projects/spring-petclinic.git
 WORKDIR /spring-petclinic
-RUN ./mvnw package
-CMD java -jar target/*.jar
+CMD java-jar/opt/app/japp.jar
